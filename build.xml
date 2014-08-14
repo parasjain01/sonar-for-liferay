@@ -2,8 +2,8 @@
 <!DOCTYPE project>
 
 <project name="sonar-for-liferay" default="configure-sonar">
-
-    <property name="sdk.dir" value="${user.dir}" />
+    <propertyfile file="sonar-id.properties" />
+    <property name="sdk.dir" value="../lifecare-sdk" />
     <import file="${sdk.dir}/build-common.xml" />
 
     <target name="configure-sonar">
