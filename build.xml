@@ -134,7 +134,7 @@
                     <entry key="${module.id}.sonar.sources" value="${module.sources}" />
                     <entry key="${module.id}.sonar.binaries" value="${module.binaries}" />
                     <entry key="${module.id}.sonar.libraries" value="${module.libraries}" />
-                    <entry key="${module.id}.sonar.exclusions" value="**/*Soap.java, **/*Clp.java, **/*PersistenceImpl.java, **/*ClpInvoker.java, **/*LocalServiceBaseImpl.java, **/ClpSerializer.java, **/*Model.java, **/*ModelImpl.java, **/*Wrapper.java,**/*BaseImpl.java, ${module.exclusions}" />
+                    <entry key="${module.id}.sonar.exclusions" value="**/*Soap.java, **/*Clp.java, **/*PersistenceImpl.java, **/*ClpInvoker.java, **/*LocalServiceBaseImpl.java, **/ClpSerializer.java, **/*Model.java, **/*ModelImpl.java, **/*Wrapper.java,**/*BaseImpl.java, **/service/**/*.java" />
                 </propertyfile>
 
                 <echo></echo>
