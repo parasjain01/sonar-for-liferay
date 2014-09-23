@@ -116,31 +116,25 @@
                     </else>
                 </if>
 
-                <!--<local name="module.exclusions" />-->
-                <!--<pathconvert pathsep="," property="module.exclusions">-->
-                    <!--<path>-->
-                        <!--<fileset dir="@{dir}">-->
-                            <!--<include name="docroot/WEB-INF/src/**/*.java" />-->
-                            <!--<include name="docroot/WEB-INF/service/**/*.java" />-->
-                            <!--<contains text="@generated" casesensitive="yes"/>-->
-                        <!--</fileset>-->
-                        <!--<fileset dir="@{dir}">-->
-                            <!--<include name="docroot/WEB-INF/src/**/*Clp.java" />-->
-                            <!--<include name="docroot/WEB-INF/service/**/*Clp.java" />-->
-                            <!--<include name="docroot/WEB-INF/src/**/Clp*.java" />-->
-                            <!--<include name="docroot/WEB-INF/service/**/Clp*.java" />-->
-                        <!--</fileset>-->
-                    <!--</path>-->
-                    <!--<map from="@{dir}/docroot/WEB-INF/src/" to="" />-->
-                    <!--<map from="@{dir}/docroot/WEB-INF/service/" to="" />-->
-                <!--</pathconvert>-->
+                <local name="module.exclusions" />
+                <pathconvert pathsep="," property="module.exclusions">
+                    <path>
+                        <fileset dir="@{dir}">
+                            <include name="docroot/WEB-INF/src/**/*.java" />
+                            <include name="docroot/WEB-INF/service/**/*.java" />
+                            <contains text="@generated" casesensitive="yes"/>
+                        </fileset>
+                    </path>
+                    <map from="@{dir}/docroot/WEB-INF/src/" to="" />
+                    <map from="@{dir}/docroot/WEB-INF/service/" to="" />
+                </pathconvert>
 
                 <propertyfile file="${sonar.prop.file}" comment="GENERATED FILE - DO NOT EDIT!">
                     <entry key="${module.id}.sonar.projectBaseDir" value="${module.basedir}" />
                     <entry key="${module.id}.sonar.sources" value="${module.sources}" />
                     <entry key="${module.id}.sonar.binaries" value="${module.binaries}" />
                     <entry key="${module.id}.sonar.libraries" value="${module.libraries}" />
-                    <entry key="${module.id}.sonar.exclusions" value="**/*Soap.java, **/*Clp.java, **/*PersistenceImpl.java, **/*ClpInvoker.java, **/*LocalServiceBaseImpl.java, **/ClpSerializer.java, **/*Model.java, **/*ModelImpl.java, **/*Wrapper.java" />
+                    <entry key="${module.id}.sonar.exclusions" value="**/*Soap.java, **/*Clp.java, **/*PersistenceImpl.java, **/*ClpInvoker.java, **/*LocalServiceBaseImpl.java, **/ClpSerializer.java, **/*Model.java, **/*ModelImpl.java, **/*Wrapper.java,**/*BaseImpl.java, ${module.exclusions}" />
                 </propertyfile>
 
                 <echo></echo>
