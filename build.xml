@@ -4,6 +4,7 @@
 <project name="sonar-for-liferay" default="configure-sonar">
     <property file="build.${user.name}.properties" />
     <echo message="SDK Dir is ${sdk.dir}" />
+    <echo message="sonar-projectfile-name is ${sonar-projectfile-name}" />
     <import file="${sdk.dir}/build-common.xml" />
 
     <target name="configure-sonar">
