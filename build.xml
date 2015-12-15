@@ -21,7 +21,7 @@
             </condition>
         </fail>
 
-        <delete file="${sdk.dir}/sonar-project.properties" />
+        <delete file="${sdk.dir}/${sonar-projectfile-name}.properties" />
         <property name="sonar.prop.file" value="${sdk.dir}/${sonar-projectfile-name}.properties" />
 
         <exec executable="git" outputproperty="build.commit" dir="${sdk.dir}">
