@@ -22,7 +22,7 @@
         </fail>
 
         <delete file="${sdk.dir}/sonar-project.properties" />
-        <property name="sonar.prop.file" value="${sdk.dir}/sonar-project.properties" />
+        <property name="sonar.prop.file" value="${sdk.dir}/${sonar-projectfile-name}.properties" />
 
         <exec executable="git" outputproperty="build.commit" dir="${sdk.dir}">
             <arg value="describe"/>
